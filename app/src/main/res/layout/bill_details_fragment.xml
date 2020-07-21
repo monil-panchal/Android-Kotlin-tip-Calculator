@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4F4C4C"
+    tools:context="com.tipandsplitcal.fragment.BillDetailsFragment">
+
+    <TextView
+        android:id="@+id/billDetailsHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bill_details"
+        android:textAlignment="viewStart"
+        android:textColor="@color/headerColor"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/billAmountValue"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_corner"
+        android:clickable="true"
+        android:ems="10"
+        android:focusableInTouchMode="true"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textColor="@color/valueColor"
+        android:textColorHint="@color/hintColor"
+        android:textIsSelectable="true"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/billAmount"
+        app:layout_constraintTop_toBottomOf="@+id/payForValue" />
+
+    <TextView
+        android:id="@+id/payFor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="18dp"
+        android:text="@string/pay_for"
+        android:textColor="@color/headingColor"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/billDetailsHeading" />
+
+    <EditText
+        android:id="@+id/payForValue"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_corner"
+        android:ems="10"
+        android:hint="@string/PayHint"
+        android:inputType="textPersonName"
+        android:maxLength="22"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/valueColor"
+        android:textColorHint="@color/hintColor"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/payFor"
+        app:layout_constraintTop_toBottomOf="@+id/billDetailsHeading" />
+
+    <TextView
+        android:id="@+id/billAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/bill_amount"
+        android:textColor="@color/headingColor"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/payFor" />
+
+    <TextView
+        android:id="@+id/tipView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/tip"
+        android:textAlignment="viewStart"
+        android:textColor="@color/headingColor"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/billAmount" />
+
+    <TextView
+        android:id="@+id/tipValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="@string/defaultTipPercnt"
+        android:textAlignment="viewStart"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toEndOf="@+id/tipView"
+        app:layout_constraintTop_toBottomOf="@+id/billAmountValue" />
+
+    <SeekBar
+        android:id="@+id/tipSeekBar"
+        android:layout_width="200dp"
+        android:layout_height="0dp"
+        android:max="25"
+        android:progressBackgroundTint="@android:color/background_light"
+        android:progressTint="@android:color/holo_orange_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toEndOf="@+id/tipView"
+        app:layout_constraintTop_toBottomOf="@+id/tipValue" />
+
+    <Switch
+        android:id="@+id/splitSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/split_bill"
+        android:textAlignment="viewStart"
+        android:textColor="@color/headingColor"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tipView" />
+
+    <TextView
+        android:id="@+id/person"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/person"
+        android:textColor="@color/headingColor"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/splitSwitch" />
+
+    <EditText
+        android:id="@+id/personValue"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rounded_corner"
+        android:ems="1"
+        android:hint="1"
+        android:inputType="numberSigned"
+        android:textAlignment="center"
+        android:textColor="@color/valueColor"
+        android:textColorHint="@color/valueColor"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toEndOf="@+id/person"
+        app:layout_constraintTop_toBottomOf="@+id/splitSwitch"
+        tools:visibility="visible" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
